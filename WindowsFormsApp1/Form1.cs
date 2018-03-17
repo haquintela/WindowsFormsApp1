@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
     {
 
         private Aluno aluno1, aluno2;
-        
+        private Professor prof1;
 
         public Form1()
         {
@@ -24,10 +24,24 @@ namespace WindowsFormsApp1
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            aluno1 = new Aluno();
-            aluno1.Nome = "José";
-            MessageBox.Show(aluno1.Nome);
-                  
+
+            Professor t1 = new Professor("Helder Q.", 12345);
+
+            aluno1 = new Aluno("Manuel", 1234, t1);
+
+            listb.Items.Add(aluno1.Numero + " - " + aluno1.Nome);
+
+            //Array de objetos
+            Aluno[] turma = new Aluno[100];
+
+            turma[1] = new Aluno("",0,t1);
+
+            turma[1].Nome = "José";
+
+            listb.Items.Add(turma[1].Professor.Nome);
+            
+ 
+            
         }
     }
 }
