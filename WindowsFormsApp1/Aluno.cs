@@ -12,6 +12,7 @@ namespace WindowsFormsApp1
         private string NomeAluno;
         private Professor Tutor;
 
+        //Construtor
         public Aluno(string NomeAluno, int NumeroAluno, Professor Tutor)
         {
             this.NumeroAluno= NumeroAluno;

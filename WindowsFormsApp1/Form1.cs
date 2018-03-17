@@ -29,6 +29,8 @@ namespace WindowsFormsApp1
 
             aluno1 = new Aluno("Manuel", 1234, t1);
 
+            textBox1.Text = aluno1.Professor.Nome;
+
             listb.Items.Add(aluno1.Numero + " - " + aluno1.Nome);
 
             //Array de objetos
